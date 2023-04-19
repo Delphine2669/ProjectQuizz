@@ -1,32 +1,32 @@
 //Base de données questions
 const questionnaire = [
     {
-        question: "Qui joue aux jeux en ligne de manière active?",
-        reponse: ["Alex", "Delphine", "Waheb", "Avec un accent québécois : D la réponse D"],
+        question: "Comment s'écrit ton nom de famille",
+        reponse: ["Rosinski", "Rozynsky", "Rauzinskie", "Avec un accent québécois : D la réponse D"],
         correct: null
     },
 
     {
-        question: "Qui est surnommé le dormeur ?",
-        reponse: ["Cathy", "42", "Thomas D", "Nills"],
+        question: "Qui aurait eu son code en le repassant en 2023 ?",
+        reponse: ["Caroline", "Maxime", "Personne", "Colette"],
         correct: null
     },
 
     {
-        question: "Qui est la personne qui nous fait le plus rire ?",
-        reponse: ["Pierre Palmade", "Thomas V", "Laëtitia", "Fabien"],
+        question: "Qui etait adepte du pain-beurre plus jeune?",
+        reponse: ["Antoine", "Joakim", "Alexia", "Caro"],
         correct: null
     },
 
     {
-        question: "Qui a vécu en Angleterre ?",
-        reponse: ["Amaury", "Wilhem", "Francois le Francais", "Nills"],
+        question: "A qui l'italie porte-t-elle bonheur ?",
+        reponse: ["Giulia", "Coco", "Francois le Francais", "Maxime"],
         correct: null
     },
 
     {
-        question: "Qui fait du sport pour décompresser ?",
-        reponse: ["Julien", "Laëtitia", "Du sport ??? Connais pas", "Cathy"],
+        question: "De qui le rose est-il la couleur preferee ?",
+        reponse: ["Kalinka", "Delphine", "Coco", "Rosa Parks"],
         correct: null
     },
 
@@ -49,14 +49,14 @@ const questionnaire = [
     },
 
     {
-        question: "Qui voit son prénom toujours écorché le Vendredi ?",
-        reponse: ["Nicolas", "Cathy", "Waheb", "Lorem ipsum dolor sit amet,…"],
+        question: "Quelle est le chiffre porte-bonheur de la famille ?",
+        reponse: ["13", "666", "25", "7"],
         correct: null
     },
 
     {
-        question: "Qui s’est auto proclamé master du barbecue ?",
-        reponse: ["Laëtitia", "Greta Thunberg", "Thomas D", "Amaury"],
+        question: "Qui a les dents les plus blanches ?",
+        reponse: ["Kalinka", "Caroline", "Giulia", "Alexia"],
         correct: null
     },
 
@@ -66,27 +66,27 @@ const questionnaire = [
         correct: null
     },
 
-    {
-        question: "Qui a un fond d’écran meet avec un chien en danger ?",
-        reponse: ["Brigitte Bardot", "Nicolas", "Thomas V", "Julien"],
+    { 
+        question: "Qui a une facon particuliere de manger des myrtille?",
+        reponse: ["Charlotte au fraise", "Mamie Valence", "Caro", "Alexia"],
         correct: null
     },
 
     {
-        question: "Qui fait ses quêtes plus vite que son ombre ?",
-        reponse: ["Nills", "Wilhem", "Lucky Luke", "Laëtitia"],
+        question: "Qui descends de la montagne plus vite que son ombre ?",
+        reponse: ["Kalinka", "Antoine", "Lucky Luke", "Joakim"],
         correct: null
     },
 
     {
-        question: "Qui est en mode relâche le Vendredi ?",
-        reponse: ["Cathy – Delphine – Fabien – Thomas V", "Alex – Thomas D – Wilhem – Julien – Nicolas", "Nills – Amaury – Laëticia – Waheb", "Réponse A – Réponse B – Réponse C et donc Réponse D"],
+        question: "Qui est gourmand ?",
+        reponse: ["Antoine, Caroline, Colette", "Maxime, Alexia,Joakim", "Kalinka,Delphine", "Réponse A – Réponse B – Réponse C et donc Réponse D"],
         correct: null
     },
 
     {
-        question: "SOS !!!",
-        reponse: ["Nicolas Wormser", "Nicolas Wormser", "Nicolas Wormser", "Nicolas Wormser"],
+        question: "Qui est la meilleure famille",
+        reponse: ["La notre", "La notre", "La notre", "La notre"],
         correct: null
     },
 ]
@@ -99,7 +99,7 @@ questionnaire[0].correct = questionnaire[0].reponse[0]
 questionnaire[1].correct = questionnaire[1].reponse[2]
 questionnaire[2].correct = questionnaire[2].reponse[1]
 questionnaire[3].correct = questionnaire[3].reponse[3]
-questionnaire[4].correct = questionnaire[4].reponse[1]
+questionnaire[4].correct = questionnaire[4].reponse[2]
 questionnaire[5].correct = questionnaire[5].reponse[0]
 questionnaire[6].correct = questionnaire[6].reponse[2]
 questionnaire[7].correct = questionnaire[7].reponse[1]
@@ -115,9 +115,9 @@ const startQuestion = document.querySelector(".go > button")
 startQuestion.addEventListener("click", quizz)
 let index = 0
 
-
 //Implantation dans le HTML
 function quizz(event) {
+
     let index = event.target.dataset.index
     document.querySelector(".start").style.display = "none"
     const rA = document.querySelector("#rightAnswer")
@@ -151,11 +151,13 @@ reponsesQuestion.forEach(response => {
         const nextQuestionW = document.querySelector(".buttonNextW > button")
         nextQuestionW.addEventListener("click", quizz)
         nextQuestionW.dataset.index = index
+        nextQuestionW."window.scrollTo(0, 0);"
 
         // A partir de la page Right
         const nextQuestionR = document.querySelector(".buttonNextR > button")
         nextQuestionR.addEventListener("click", quizz)
         nextQuestionR.dataset.index = index
+        scroll(0,0)
 
     })
 })
@@ -174,14 +176,14 @@ function checkAnswer(response) {
             scoreBeer++
             console.log(scoreBeer)
             let scoreR = document.querySelector('.userScoreR')
-            scoreR.textContent = (`Tu as gagné ${scoreBeer} bières jusqu'a maintenant!!!`)
+            scoreR.textContent = (`Tu as gagné ${scoreBeer} oeufs jusqu'a maintenant!!!`)
         }
         else {
             const wrongAnswer = document.querySelector("#wrongAnswer")
             wrongAnswer.style.display = "block"
             console.log(scoreBeer)
             let scoreW = document.querySelector('.userScoreW')
-            scoreW.textContent = (`Tu as ${scoreBeer} bières `)
+            scoreW.textContent = (`Tu as ${scoreBeer} oeufs `)
         }
     } else {
         const endOfQuizz = document.querySelector(".endQuizz")
@@ -192,8 +194,7 @@ function checkAnswer(response) {
         switch (scoreBeer) {
             case 0:
                 scoreFinal.textContent = `${pseudo}, ceci est techniquement impossible.`;
-                // const lowScore = document.querySelector(".meanBear")
-                // lowScore.style.display = "block"
+               
                 break;
             case 1:
                 scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
@@ -202,7 +203,7 @@ function checkAnswer(response) {
                 scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
                 break;
             case 3: case 4: case 5: case 6:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas. COURS VITE!!!`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez la famille, il va donc te considérer comme son futur repas. COURS VITE!!!`;
                 break;
             case 7: case 8: case 9:
                 scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;

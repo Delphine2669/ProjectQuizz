@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Quizz :Connais-tu bien la famille</title>
+</head>
+<body> <header>
+    <div class=titre>Family Quiz </div>
+</header>
+    <div class="start">
+        <h1 class="quiz">QUIZZ</h1>
+        
+        
+            <p class="hello">Hello Wilder !!!</p><br>
+        
+        <div class="go">
+            <button type="submit" data-index="0">Go</button></div><br>
+    </div>
+    <div class="container">
+        <div class="question">
+
+            <h1 class="quest">Question : </h1>
+        </div>
+        <div class="reponse reponse-1" data-response="R1">
+            <p class="R1">Réponse-1 ?</p>
+        </div>
+        <div class="reponse reponse-2" data-response="R2">
+            <p class="R2">Réponse-2 ?</p>
+        </div>
+        <div class="reponse reponse-3" data-response="R3">
+            <p class="R3">Réponse-3 ?</p>
+        </div>
+        <div class="reponse reponse-4" data-response="R4">
+            <p class="R4">Réponse-4 ?</p>
+        </div>
+    </div>
+
+    <section class="answerPageCont">
+        <div id="wrongAnswer">
+            <h1 class="answerPageW"> Mauvaise Réponse <br>J'ai soif !!
+            </h1>
+            <img class="bear" src="assets/madBunny.png" width="200" alt="image cartoon d'un ours en colere">
+            <div class=blocScore>
+                <p class="scoreTitle"> Score:</p>
+                <p class="userScoreW"></p>
+                <img class="beerCounter" src="assets/chocolateEgg.png" width="70" alt="icone d'un oeuf en chocolat">
+
+            </div>
+            <div class="buttonNextW">
+                <button class="next"> Question suivante</button>
+            </div>
+        </div><br>
+        <div id="rightAnswer">
+            <h1 class="answerPageR"> Bravo bonne réponse <br>!! </h1>
+            <img class="bear" src="assets/happyBunny.png" width="200" alt="image cartoon d'un ourson mignon"><br>
+
+            <div class=blocScore>
+                <p class="scoreTitle"> Score:</p>
+                <p class="userScoreR"></p>
+                <img class="beerCounter" src="assets/chocolateEgg.png" width="70" alt="icone d'un oeuf en chocolat">
+            </div>
+            <div class="buttonNextR">
+                <button class="next">Question suivante</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="endQuizz">
+        <div class="finalScore">
+            <h1 class="endOfQuizz">Fin du Quizz</h1>
+            <img class="cheersPic" src="assets/cheers.png " width="70" alt="icones de chopes de bieres trinquant">
+            <div class="score">Affichage du score dans quelques instants...</div><br>
+            <div class="beerCounter"><img src="assets/chocolateEgg.png" width="70" alt="icone d'un oeuf en chocolat"></div>
+ 
+        </div>
+    </div>
+</main>
+<footer>
+    <p class="copyright">#We are Family </p>
+</footer>
+
+
+<script src="Script/Hello.js"></script>
+<script src="Script/BDQuestions.js"></script>
+
+    
+</body>
+</html>
