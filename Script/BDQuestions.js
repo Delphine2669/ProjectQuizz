@@ -151,13 +151,13 @@ reponsesQuestion.forEach(response => {
         const nextQuestionW = document.querySelector(".buttonNextW > button")
         nextQuestionW.addEventListener("click", quizz)
         nextQuestionW.dataset.index = index
-        nextQuestionW."window.scrollTo(0, 0);"
+       
 
         // A partir de la page Right
         const nextQuestionR = document.querySelector(".buttonNextR > button")
         nextQuestionR.addEventListener("click", quizz)
         nextQuestionR.dataset.index = index
-        scroll(0,0)
+
 
     })
 })
