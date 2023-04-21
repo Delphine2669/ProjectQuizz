@@ -4,11 +4,15 @@
 }
 .welcome,.startQuiz{
     text-align: center;
+
 }
 /* .startQuiz{
     margin-left: 40%;
 } */
 
+.startQuiz a:visited {
+text-decoration: none;
+}
 body {
     margin: 0;
     background-color: #f5f5dc;
