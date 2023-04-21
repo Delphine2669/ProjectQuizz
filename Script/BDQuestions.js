@@ -37,8 +37,8 @@ const questionnaire = [
     },
 
     {
-        question: "Qui vient en train à la formation ?",
-        reponse: ["Thomas D", "Nicolas", "Fabien", "49-3"],
+        question: "Qui est le maitre des fourneaux?",
+        reponse: ["Alexia", "Antoine", "Caro", "maitre coq"],
         correct: null
     },
 
@@ -197,22 +197,22 @@ function checkAnswer(response) {
                
                 break;
             case 1:
-                scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
+                scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. Le lapin garde ses oeufs et est reparti. C'est toi la cloche de pâque.`;
                 break;
             case 2:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, le lapin repart avec le plus gros de son stock. Il va se regaler`;
                 break;
             case 3: case 4: case 5: case 6:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez la famille, il va donc te considérer comme son futur repas. COURS VITE!!!`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais tu n'as eu que ${scoreBeer} oeufs. Tu ne connais pas assez la famille, tu feteras paques l'annee prochaine`;
                 break;
             case 7: case 8: case 9:
-                scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
+                scoreFinal.textContent = `Presque ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin s'est suffisament deleste de son stock, il t'a adopte`;
                 break;
             case 10: case 11: case 12: case 13: case 14:
-                scoreFinal.textContent = `Bravo ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+                scoreFinal.textContent = `Bravo ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin est ton nouveau meilleur ami!! `;
                 break;
             case 15:
-                scoreFinal.textContent = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+                scoreFinal.textContent = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! Tu as eu ${scoreBeer} oeufs. Les cloches resonnent !!!`;
                 break;
             default:
                 scoreFinal.textContent = `42`;
