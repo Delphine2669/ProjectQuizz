@@ -200,13 +200,13 @@ function checkAnswer(response) {
                 scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. Le lapin garde ses oeufs et est reparti. C'est toi la cloche de pâque.`;
                 break;
             case 2:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, le lapin repart avec le plus gros de son stock. Il va se regaler`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, tant pis, le lapin repart avec le plus gros de son stock. Il va se regaler`;
                 break;
             case 3: case 4: case 5: case 6:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais tu n'as eu que ${scoreBeer} oeufs. Tu ne connais pas assez la famille, tu feteras paques l'annee prochaine`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais tu n'as eu que ${scoreBeer} oeufs. Tu ne connais pas assez la famille, le lapin va prendre ta place`;
                 break;
             case 7: case 8: case 9:
-                scoreFinal.textContent = `Presque ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin s'est suffisament deleste de son stock, il t'a adopte`;
+                scoreFinal.textContent = `Presque ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin s'est suffisament délesté de son stock, il t'a adopté`;
                 break;
             case 10: case 11: case 12: case 13: case 14:
                 scoreFinal.textContent = `Bravo ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin est ton nouveau meilleur ami!! `;
