@@ -13,7 +13,8 @@ text-decoration: none;
 }
 body {
     margin: 0;
-    background-color: #f5f5dc;
+    background-color: #fefbda;
+    color:#1a0e02;
 }
 
 main {
@@ -26,30 +27,35 @@ main {
     color:white;
     font-size: large;
     font-weight: 100;
+    background-color:#6b3e0f ;
 }
 
 
 /* Centrage du texte sur la page*/
 .answerPageW {
     text-align: center;
-    color: red
+    color: red;
+    font-size:medium;
 }
 
 .answerPageR {
     text-align: center;
-    color: green
+    color: green;
+    font-size:medium;
 }
 
 /*image et score de la page end mobilefirst*/
 .bear {
     display: flex;
     margin: auto;
+    width:20%;
 }
 
 .blocScore{
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size:medium ;
  
 }
 
@@ -62,7 +68,7 @@ main {
 
 .scoreTitle,
 .endOfQuizz {
-    font-size: 200%;
+    font-size: 100%;
     color: blue;
     text-decoration: underline;
     text-align: center;
@@ -71,16 +77,18 @@ main {
 .userScoreR,
 .userScoreW,
 .score {
-    font-size: 140%;
+    font-size: 120%;
     color: blue
 }
 
 .beerCounter {
     padding-bottom: 20px;
-    margin: auto
+    margin: auto;
+    width:20%;
 }
 .answerPageCont{
-margin-bottom: 200px;
+margin-bottom: 100px;
+margin-top:-6rem;
 height: 0;
 }
 
@@ -110,11 +118,11 @@ height: 0;
     display: flex;
     justify-content: space-around;
     width: 400px;
-    height: 50px;
+    height: 20px;
     margin:auto;
 }
 .buttonNextW, .buttonNextR{
-    margin-bottom:1200px;
+padding:10px;
 }
 
 .next {
@@ -123,8 +131,9 @@ height: 0;
     font-size: large;
     font-family: 'Lucida Sans';
     width: 200px;
-    height: 50px;
+    height: 37px;
     padding: 0;
+    margin-bottom: 8rem;
 }
 
 
@@ -172,28 +181,34 @@ header {
         "reponse-2 reponse-2 reponse-2"
         "reponse-3 reponse-3 reponse-3"
         "reponse-4 reponse-4 reponse-4";
-margin-top: 50px;
+margin-top: 2rem;
+margin-bottom: 4rem;
+
+}
+.quest{
+    font-size: large;
 }
 
 .question {
     grid-area: question;
-    background-color: rgb(239, 202, 18);
+    background-color: #FFBD3A;
+   
 }
 
 .reponse-1 {
     grid-area: reponse-1;
-    background-color: #f39230;
+    background-color: #f7ff08;
     max-width: 80%;
     margin-left: 10%;
     justify-content: center;
 }
 
 .reponse-1:hover {
-    background-color: #c16e1b;
+    background-color: #bdc30e;
 }
 
 .reponse-1:active {
-    background-color: #e7a05a;
+    background-color: #f5f984;
 }
 
 .reponse-2 {
@@ -261,8 +276,8 @@ margin-top: 50px;
 }
 
 .answerPageCont{
-    margin-bottom:800px;
-
+    /* margin-bottom:800px; */
+    margin: bottom 24rem;
 }
 /*modif du todo --> la taille est fixe le problème vient du flex ou de la grid
 CODE HERE
@@ -279,6 +294,7 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 0.7em;
+
 }
 
 footer,
@@ -348,7 +364,7 @@ button:active {
 
 /* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
-    .container {
+ .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 60px 20px;
@@ -359,12 +375,10 @@ button:active {
             margin-top:120px;
     }
 
-    .bear {
+.bear {
         width: 20%;
     }
-/* .startQuiz{
-    margin-left: 46%;
-} */
+
 .buttonNext {
         display: flex;
         margin-left: 400px;
@@ -379,16 +393,15 @@ button:active {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         width: 200px;
         height: 50px;
-        margin-bottom: 800px;
 }
 
-    footer {
+footer {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
-    }
+ }
 
-    .logo {
+.logo {
         max-width: 600px;
     }
 
@@ -398,16 +411,18 @@ button:active {
     display:none;
 }
 #rightAnswer{
-      margin-bottom:740px ;
+      /* margin-bottom:740px ;  */
+       margin-bottom:20rem ;
 }
 #wrongAnswer{
-    margin-bottom: 540px;
+    /* margin-bottom: 540px; */
+    margin-bottom:20rem ;
 }
 
 .endQuizz{
     display:none;
     height:0;
-    margin-top: -800px;
+    margin-top:49rem;
 }
 .answerPageR,.answerPageW{
 width: 400px;
@@ -417,11 +432,35 @@ width: 400px;
 
 }
 .blocScore{
-    margin-top: -380px;
+    margin-top: -22rem;
 }
 
 .buttonNextW, .buttonNextR{
     margin-top: -250px;
     margin-right:-800px;
 }
+.basket{
+margin-left: 40%;
+}
+
+.finalScore{
+margin-top:-800px;
+    margin-bottom: 200px;
+}
+.restart{
+    height:min-content;
+    margin: 0;
+    padding:10px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.startQuiz{
+    height:min-content;
+    margin: auto;
+padding:10px;
+
+
+}
+
 }
