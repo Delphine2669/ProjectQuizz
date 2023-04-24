@@ -8,7 +8,7 @@ const questionnaire = [
 
     {
         question: "Qui aurait eu son code en le repassant en 2023 ?",
-        reponse: ["Caroline", "Maxime", "Personne", "Colette"],
+        reponse: ["Caroline", "Maxime", "Personne", "Coco"],
         correct: null
     },
 
@@ -31,13 +31,13 @@ const questionnaire = [
     },
 
     {
-        question: "Qui pourrait être le deuxième formateur ?",
-        reponse: ["Delphine", "Chat GPT", "Waheb", "Thomas V"],
+        question: "Qui peut servir de technicien informatique?",
+        reponse: ["Delphine", "Chat GPT", "Alexia", "Maxime"],
         correct: null
     },
 
     {
-        question: "Qui est le maitre des fourneaux?",
+        question: "Qui est le meilleur derriere les fourneaux?",
         reponse: ["Alexia", "Antoine", "Caro", "maitre coq"],
         correct: null
     },
@@ -61,8 +61,8 @@ const questionnaire = [
     },
 
     {
-        question: "Qui a des bugs réguliers sur son PC, sauf quand elle devrait en avoir ??",
-        reponse: ["Cathy", "C’est techniquement impossible", "Wilhem", "Waheb"],
+        question: "Mer ou Montagne ?",
+        reponse: ["Les 2", "C’est impossible", "la mère Poulard", "Gilber Montagné"],
         correct: null
     },
 
@@ -173,8 +173,8 @@ function checkAnswer(response) {
         if (response.dataset.correct === "true") {
             const goodAnswer = document.querySelector("#rightAnswer")
             goodAnswer.style.display = "block"
-            scoreBeer++
             console.log(scoreBeer)
+            scoreBeer++
             let scoreR = document.querySelector('.userScoreR')
             scoreR.textContent = (`Tu as gagné ${scoreBeer} oeufs jusqu'a maintenant!!!`)
         }
@@ -225,30 +225,3 @@ function checkAnswer(response) {
 
 
 
-
-
-// function hideA() {
-//     const wrongAnswer = document.querySelector(".wrongAnswer")
-//     const displayWA = wrongAnswer.style.display
-
-//     const rightAnswer = document.querySelector(".rightAnswer")
-//     const displayRA = rightAnswer.style.display
-
-
-
-//     if (displayWA == "block" || displayRA == "block") {
-//         displayWA.style.display = "none"
-//         displayRA.style.display = "none"
-//     }
-//     else {
-//         displayWA.style.display = "block"
-//         displayRA.style.display = "block"
-//     }
-// }
-
-
-// function hideButton() {
-
-//     document.getElementById('btn').style.display = 'none';
-
-// }

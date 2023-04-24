@@ -6,11 +6,9 @@
     text-align: center;
 
 }
-/* .startQuiz{
-    margin-left: 40%;
-} */
 
-.startQuiz a:visited {
+
+.startQuiz a:visited, a:link{
 text-decoration: none;
 }
 body {
@@ -48,12 +46,19 @@ main {
     margin: auto;
 }
 
-.blocScore,
+.blocScore{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ 
+}
+
 .finalScore {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .scoreTitle,
 .endOfQuizz {
@@ -106,8 +111,10 @@ height: 0;
     justify-content: space-around;
     width: 400px;
     height: 50px;
-    margin: auto;
-    
+    margin:auto;
+}
+.buttonNextW, .buttonNextR{
+    margin-bottom:1200px;
 }
 
 .next {
@@ -254,7 +261,8 @@ margin-top: 50px;
 }
 
 .answerPageCont{
-    margin-bottom:700px;
+    margin-bottom:800px;
+
 }
 /*modif du todo --> la taille est fixe le problème vient du flex ou de la grid
 CODE HERE
@@ -384,19 +392,36 @@ button:active {
         max-width: 600px;
     }
 
-#rightAnswer{
-    margin-bottom:740px ;
+#rightAnswer,#wrongAnswer{
+  
+    height:0;
+    display:none;
 }
-
+#rightAnswer{
+      margin-bottom:740px ;
+}
 #wrongAnswer{
     margin-bottom: 540px;
 }
 
 .endQuizz{
-    margin-bottom:400px;
+    display:none;
+    height:0;
+    margin-top: -800px;
+}
+.answerPageR,.answerPageW{
+width: 400px;
+}
+.bear{
+  margin-left:100px;
 
 }
+.blocScore{
+    margin-top: -380px;
+}
 
-
-
+.buttonNextW, .buttonNextR{
+    margin-top: -250px;
+    margin-right:-800px;
+}
 }
