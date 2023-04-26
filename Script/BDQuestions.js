@@ -38,19 +38,13 @@ const questionnaire = [
 
     {
         question: "Qui est le meilleur derriere les fourneaux?",
-        reponse: ["Alexia", "Antoine", "Caro", "maitre coq"],
-        correct: null
-    },
-
-    {
-        question: "Qui a une voiture électrique ?",
-        reponse: ["Waheb", "Julien", "Donald Trump", "Nills"],
+        reponse: ["Alexia", "Antoine", "maitre coq","Caro"],
         correct: null
     },
 
     {
         question: "Quelle est le chiffre porte-bonheur de la famille ?",
-        reponse: ["13", "666", "25", "7"],
+        reponse: ["13", "25", "666", "7"],
         correct: null
     },
 
@@ -74,7 +68,7 @@ const questionnaire = [
 
     {
         question: "Qui descends de la montagne plus vite que son ombre ?",
-        reponse: ["Kalinka", "Antoine", "Lucky Luke", "Joakim"],
+        reponse: ["Kalinka", "Lucky Luke","Antoine", "Joakim"],
         correct: null
     },
 
@@ -101,15 +95,14 @@ questionnaire[2].correct = questionnaire[2].reponse[1]
 questionnaire[3].correct = questionnaire[3].reponse[3]
 questionnaire[4].correct = questionnaire[4].reponse[2]
 questionnaire[5].correct = questionnaire[5].reponse[0]
-questionnaire[6].correct = questionnaire[6].reponse[2]
+questionnaire[6].correct = questionnaire[6].reponse[3]
 questionnaire[7].correct = questionnaire[7].reponse[1]
-questionnaire[8].correct = questionnaire[8].reponse[2]
-questionnaire[9].correct = questionnaire[9].reponse[3]
-questionnaire[10].correct = questionnaire[10].reponse[0]
-questionnaire[11].correct = questionnaire[11].reponse[1]
-questionnaire[12].correct = questionnaire[12].reponse[1]
-questionnaire[13].correct = questionnaire[13].reponse[3]
-questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
+questionnaire[8].correct = questionnaire[8].reponse[3]
+questionnaire[9].correct = questionnaire[9].reponse[0]
+questionnaire[10].correct = questionnaire[10].reponse[1]
+questionnaire[11].correct = questionnaire[11].reponse[2]
+questionnaire[12].correct = questionnaire[12].reponse[3]
+questionnaire[13].correct = (questionnaire[13].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
 
 const startQuestion = document.querySelector(".go > button")
 startQuestion.addEventListener("click", quizz)
@@ -169,7 +162,7 @@ console.log(reponsesQuestion)
 
 // verifier bonne ou mauvaise reponse de l'user => affichage answer
 function checkAnswer(response) {
-    if (index < 14) {
+    if (index < 13) {
         if (response.dataset.correct === "true") {
             const goodAnswer = document.querySelector("#rightAnswer")
             goodAnswer.style.display = "block"
