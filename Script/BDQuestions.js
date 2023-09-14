@@ -8,7 +8,7 @@ const questionnaire = [
 
     {
         question: "Qui aurait eu son code en le repassant en 2023 ?",
-        reponse: ["Caroline", "Maxime", "Personne", "Colette"],
+        reponse: ["Caroline", "Maxime", "Personne", "Coco"],
         correct: null
     },
 
@@ -31,26 +31,20 @@ const questionnaire = [
     },
 
     {
-        question: "Qui pourrait être le deuxième formateur ?",
-        reponse: ["Delphine", "Chat GPT", "Waheb", "Thomas V"],
+        question: "Qui peut servir de technicien informatique?",
+        reponse: ["Delphine", "Chat GPT", "Alexia", "Maxime"],
         correct: null
     },
 
     {
-        question: "Qui vient en train à la formation ?",
-        reponse: ["Thomas D", "Nicolas", "Fabien", "49-3"],
-        correct: null
-    },
-
-    {
-        question: "Qui a une voiture électrique ?",
-        reponse: ["Waheb", "Julien", "Donald Trump", "Nills"],
+        question: "Qui est le meilleur derriere les fourneaux?",
+        reponse: ["Alexia", "Antoine", "maitre coq","Caro"],
         correct: null
     },
 
     {
         question: "Quelle est le chiffre porte-bonheur de la famille ?",
-        reponse: ["13", "666", "25", "7"],
+        reponse: ["13", "25", "666", "7"],
         correct: null
     },
 
@@ -61,8 +55,8 @@ const questionnaire = [
     },
 
     {
-        question: "Qui a des bugs réguliers sur son PC, sauf quand elle devrait en avoir ??",
-        reponse: ["Cathy", "C’est techniquement impossible", "Wilhem", "Waheb"],
+        question: "Mer ou Montagne ?",
+        reponse: ["Les 2", "C’est impossible", "la mère Poulard", "Gilber Montagné"],
         correct: null
     },
 
@@ -74,7 +68,7 @@ const questionnaire = [
 
     {
         question: "Qui descends de la montagne plus vite que son ombre ?",
-        reponse: ["Kalinka", "Antoine", "Lucky Luke", "Joakim"],
+        reponse: ["Kalinka", "Lucky Luke","Antoine", "Joakim"],
         correct: null
     },
 
@@ -101,15 +95,14 @@ questionnaire[2].correct = questionnaire[2].reponse[1]
 questionnaire[3].correct = questionnaire[3].reponse[3]
 questionnaire[4].correct = questionnaire[4].reponse[2]
 questionnaire[5].correct = questionnaire[5].reponse[0]
-questionnaire[6].correct = questionnaire[6].reponse[2]
+questionnaire[6].correct = questionnaire[6].reponse[3]
 questionnaire[7].correct = questionnaire[7].reponse[1]
-questionnaire[8].correct = questionnaire[8].reponse[2]
-questionnaire[9].correct = questionnaire[9].reponse[3]
-questionnaire[10].correct = questionnaire[10].reponse[0]
-questionnaire[11].correct = questionnaire[11].reponse[1]
-questionnaire[12].correct = questionnaire[12].reponse[1]
-questionnaire[13].correct = questionnaire[13].reponse[3]
-questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
+questionnaire[8].correct = questionnaire[8].reponse[3]
+questionnaire[9].correct = questionnaire[9].reponse[0]
+questionnaire[10].correct = questionnaire[10].reponse[1]
+questionnaire[11].correct = questionnaire[11].reponse[2]
+questionnaire[12].correct = questionnaire[12].reponse[3]
+questionnaire[13].correct = (questionnaire[13].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
 
 const startQuestion = document.querySelector(".go > button")
 startQuestion.addEventListener("click", quizz)
@@ -151,13 +144,13 @@ reponsesQuestion.forEach(response => {
         const nextQuestionW = document.querySelector(".buttonNextW > button")
         nextQuestionW.addEventListener("click", quizz)
         nextQuestionW.dataset.index = index
-        nextQuestionW."window.scrollTo(0, 0);"
+       
 
         // A partir de la page Right
         const nextQuestionR = document.querySelector(".buttonNextR > button")
         nextQuestionR.addEventListener("click", quizz)
         nextQuestionR.dataset.index = index
-        scroll(0,0)
+
 
     })
 })
@@ -169,12 +162,12 @@ console.log(reponsesQuestion)
 
 // verifier bonne ou mauvaise reponse de l'user => affichage answer
 function checkAnswer(response) {
-    if (index < 14) {
+    if (index < 13) {
         if (response.dataset.correct === "true") {
             const goodAnswer = document.querySelector("#rightAnswer")
             goodAnswer.style.display = "block"
-            scoreBeer++
             console.log(scoreBeer)
+            scoreBeer++
             let scoreR = document.querySelector('.userScoreR')
             scoreR.textContent = (`Tu as gagné ${scoreBeer} oeufs jusqu'a maintenant!!!`)
         }
@@ -197,22 +190,22 @@ function checkAnswer(response) {
                
                 break;
             case 1:
-                scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
+                scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. Le lapin garde ses oeufs et est reparti. C'est toi la cloche de pâque.`;
                 break;
             case 2:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, tant pis, le lapin repart avec le plus gros de son stock. Il va se regaler`;
                 break;
             case 3: case 4: case 5: case 6:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez la famille, il va donc te considérer comme son futur repas. COURS VITE!!!`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais tu n'as eu que ${scoreBeer} oeufs. Tu ne connais pas assez la famille, le lapin va prendre ta place`;
                 break;
             case 7: case 8: case 9:
-                scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
+                scoreFinal.textContent = `Presque ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin s'est suffisament délesté de son stock, il t'a adopté`;
                 break;
             case 10: case 11: case 12: case 13: case 14:
-                scoreFinal.textContent = `Bravo ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+                scoreFinal.textContent = `Bravo ${pseudo}! Tu as eu ${scoreBeer} oeufs. Le lapin est ton nouveau meilleur ami!! `;
                 break;
             case 15:
-                scoreFinal.textContent = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+                scoreFinal.textContent = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! Tu as eu ${scoreBeer} oeufs. Les cloches resonnent !!!`;
                 break;
             default:
                 scoreFinal.textContent = `42`;
@@ -225,30 +218,3 @@ function checkAnswer(response) {
 
 
 
-
-
-// function hideA() {
-//     const wrongAnswer = document.querySelector(".wrongAnswer")
-//     const displayWA = wrongAnswer.style.display
-
-//     const rightAnswer = document.querySelector(".rightAnswer")
-//     const displayRA = rightAnswer.style.display
-
-
-
-//     if (displayWA == "block" || displayRA == "block") {
-//         displayWA.style.display = "none"
-//         displayRA.style.display = "none"
-//     }
-//     else {
-//         displayWA.style.display = "block"
-//         displayRA.style.display = "block"
-//     }
-// }
-
-
-// function hideButton() {
-
-//     document.getElementById('btn').style.display = 'none';
-
-// }

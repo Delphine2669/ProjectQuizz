@@ -1,235 +1,259 @@
 .titre {
-    font-size: 2em;
-    text-align: center;
+  font-size: 2em;
+  text-align: center;
 }
-.welcome,.startQuiz{
-    text-align: center;
+.welcome,
+.startQuiz {
+  text-align: center;
 }
-/* .startQuiz{
-    margin-left: 40%;
-} */
 
+.startQuiz a:visited,
+a:link {
+  text-decoration: none;
+}
 body {
-    margin: 0;
-    background-color: #f5f5dc;
+  margin: 0;
+  background-color: #fefbda;
+  color: #1a0e02;
 }
 
 main {
-    margin-top: 120px;
-    margin-bottom: 900px;
+  margin-top: 30dvh;
+  margin-bottom: 50dvh;
 }
 
 .copyright {
-    margin: 2px;
-    color:white;
-    font-size: large;
-    font-weight: 100;
+  margin: 2px;
+  color: white;
+  font-size: large;
+  font-weight: 100;
+  background-color: #6b3e0f;
 }
-
 
 /* Centrage du texte sur la page*/
 .answerPageW {
-    text-align: center;
-    color: red
+  text-align: center;
+  color: red;
+  font-size: medium;
 }
 
 .answerPageR {
-    text-align: center;
-    color: green
+  text-align: center;
+  color: green;
+  font-size: medium;
 }
 
 /*image et score de la page end mobilefirst*/
 .bear {
-    display: flex;
-    margin: auto;
+  left: 15%;
+  width: 20%;
 }
 
-.blocScore,
+.blocScore {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: medium;
+  margin-top: -15dvh;
+}
+
 .finalScore {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scoreTitle,
 .endOfQuizz {
-    font-size: 200%;
-    color: blue;
-    text-decoration: underline;
-    text-align: center;
+  font-size: 100%;
+  color: blue;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .userScoreR,
 .userScoreW,
 .score {
-    font-size: 140%;
-    color: blue
+  font-size: 120%;
+  color: blue;
 }
 
 .beerCounter {
-    padding-bottom: 20px;
-    margin: auto
+  padding-bottom: -10%;
+  width: 13dvw;
+  margin-left: 75dvw;
+  margin-top: -15dvh;
 }
-.answerPageCont{
-margin-bottom: 200px;
+.answerPageCont {
+  margin-bottom: 20dvh;
+  margin-top: 25dvh;
+  height: 0;
 }
 
 #wrongAnswer {
-    display: none;
-    height: 0;
- 
+  display: none;
+  height: 0;
 }
 
 #rightAnswer {
-    display: none;
-    height: 0;
-  
+  display: none;
+  height: 0;
 }
 
 .cuteBear,
 .meanBear,
-.cheersPic{
-    display: none;
-    height: 0
+.cheersPic {
+  display: none;
+  height: 0;
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
 /*Bouton  page answer OK*/
 
 .buttonNext {
-    display: flex;
-    justify-content: space-around;
-    width: 400px;
-    height: 50px;
-    margin: auto;
-    
+  display: flex;
+  justify-content: space-around;
+  width: 40dvw;
+  height: 18dvh;
+  margin-bottom: 10dvh;
+  padding: 2%;
+}
+.buttonNextW,
+.buttonNextR {
+  padding: 5px;
 }
 
 .next {
-    background-color: #FFBD3A;
-    border-radius: 14px;
-    font-size: large;
-    font-family: 'Lucida Sans';
-    width: 200px;
-    height: 50px;
-    padding: 0;
+  background-color: #ffbd3a;
+  border-radius: 14px;
+  font-size: medium;
+  font-family: "Lucida Sans";
+  width: 100 dvw;
+  height: 100%;
+  padding: 0;
+  margin-bottom: 10dvh;
 }
-
 
 .next:hover {
-    background-color: #cf9011;
+  background-color: #cf9011;
 }
 
-
 .next:active {
-    background-color: #eabc60;
+  background-color: #eabc60;
 }
 
 .cheersPic {
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
 }
 
 .endQuizz {
-    display:none ;
-    height: 0
+  display: none;
+  height: 0;
 }
 
-
 header {
-    position: fixed;
-    top: 0;
-    background-color:  #6b3e0f;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-size: 1em;
-    color:white;
+  position: fixed;
+  top: 0;
+  background-color: #6b3e0f;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1em;
+  color: white;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(5,0.5fr);
-    grid-auto-flow: row;
-    gap: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    grid-template-areas:
-        "question question question"
-        "reponse-1 reponse-1 reponse-1"
-        "reponse-2 reponse-2 reponse-2"
-        "reponse-3 reponse-3 reponse-3"
-        "reponse-4 reponse-4 reponse-4";
-margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 0.5fr);
+  grid-auto-flow: row;
+  gap: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-template-areas:
+    "question question question"
+    "reponse-1 reponse-1 reponse-1"
+    "reponse-2 reponse-2 reponse-2"
+    "reponse-3 reponse-3 reponse-3"
+    "reponse-4 reponse-4 reponse-4";
+  margin-top: 10dvh;
+  margin-bottom: 10dvh;
+}
+.quest {
+  font-size: large;
 }
 
 .question {
-    grid-area: question;
-    background-color: rgb(239, 202, 18);
+  grid-area: question;
+  background-color: #ffbd3a;
 }
 
 .reponse-1 {
-    grid-area: reponse-1;
-    background-color: #f39230;
-    max-width: 80%;
-    margin-left: 10%;
-    justify-content: center;
+  grid-area: reponse-1;
+  background-color: #f7ff08;
+  max-width: 20dvw;
+  margin-left: 24%;
+  height: 120%;
+  justify-content: center;
 }
 
 .reponse-1:hover {
-    background-color: #c16e1b;
+  background-color: #bdc30e;
 }
 
 .reponse-1:active {
-    background-color: #e7a05a;
+  background-color: #f5f984;
 }
 
 .reponse-2 {
-    grid-area: reponse-2;
-    background-color: #f80961;
-    max-width: 80%;
-    margin-left: 10%;
-    justify-content: center;
+  grid-area: reponse-2;
+  background-color: #f80961;
+  max-width: 20dvw;
+  margin-left: 24%;
+  height: 120%;
+  justify-content: center;
 }
 
 .reponse-2:hover {
-    background-color: #970a3e;
+  background-color: #970a3e;
 }
 
 .reponse-2:active {
-    background-color: #ef548d;
+  background-color: #ef548d;
 }
 
 .reponse-3 {
-    grid-area: reponse-3;
-    background-color: #a524d4;
-    max-width: 80%;
-    margin-left: 10%;
-    justify-content: center;
+  grid-area: reponse-3;
+  background-color: #a524d4;
+  max-width: 20dvw;
+  margin-left: 24%;
+  height: 120%;
+  justify-content: center;
 }
 
 .reponse-3:hover {
-    background-color: #671186;
+  background-color: #671186;
 }
 
 .reponse-3:active {
-    background-color: #b15dd0;
+  background-color: #b15dd0;
 }
 
 .reponse-4 {
-    grid-area: reponse-4;
-    background-color: #21b5da;
-    max-width: 80%;
-    margin-left: 10%;
-    justify-content: center;
+  grid-area: reponse-4;
+  background-color: #21b5da;
+  max-width: 20dvw;
+  margin-left: 24%;
+  height: 120%;
+  justify-content: center;
 }
 
 .reponse-4:hover {
-    background-color: #1487a4;
+  background-color: #1487a4;
 }
 
 .reponse-4:active {
-    background-color: #5dc1da;
+  background-color: #5dc1da;
 }
 
 /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
@@ -238,18 +262,19 @@ margin-top: 50px;
 .reponse-2,
 .reponse-3,
 .reponse-4 {
-    display: flex;
-    min-width: 75%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 2px rgb(101, 93, 93) solid;
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  min-width: 50dvw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px rgb(101, 93, 93) solid;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.answerPageCont{
-    margin-bottom:700px;
+.answerPageCont {
+  /* margin-bottom:800px; */
+  margin: bottom 80%;
 }
 /*modif du todo --> la taille est fixe le problème vient du flex ou de la grid
 CODE HERE
@@ -257,141 +282,205 @@ fin des modifs*/
 /* FIN du css grid mobile first */
 
 footer {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    bottom: 0;
-    background-color: #6b3e0f;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    font-size: 0.7em;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  bottom: 0;
+  background-color: #6b3e0f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 0.7em;
 }
 
 footer,
 header {
-    text-align: center;
-    width: 100%;
-    font-family: 'Permanent Marker', arial, "sans serif";
-    font-weight: lighter;
+  text-align: center;
+  width: 100%;
+  font-family: "Permanent Marker", arial, "sans serif";
+  font-weight: lighter;
 }
 
 .logo {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    display: flex;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: flex;
 }
 
 /*MAJ 270323.15:38 - à vérifier sur le index si ok / NOK - TODO : Utiliser une classe !! rattaché à l'inde.html */
 .quiz {
-    text-align: center;
-    font-family: 'Permanent Marker', arial, "sans serif";
-    font-size: 2.7em;
-    color: #550000;
-    margin-top: 90px;
-    margin-bottom: 20px;
-
+  text-align: center;
+  font-family: "Permanent Marker", arial, "sans serif";
+  font-size: 2.7em;
+  color: #550000;
+  margin-top: 15%;
+  margin-bottom: 4%;
 }
 
 /* Rattaché à Hello.js (easter egg caché by Fabien XD */
 .hello {
-    font-size: 2em;
-    text-align: center;
-    color: #550000;
+  font-size: 2em;
+  text-align: center;
+  color: #550000;
 }
 
 /*Bouton non fonctionnel sur la page index.html*/
 
 button {
-    /* TODO - Ajouter une classe !!! */
-    width: 250px;
-    padding: 45px;
-    margin: auto;
-    margin-bottom: 80px;
-    border-radius: 20px;
-    box-shadow: 6px 6px 0px;
-    border-style: solid;
-    font-size: 25px;
-    display: block;
-    background-color: #FFBD3A;
-    cursor: pointer;
+  /* TODO - Ajouter une classe !!! */
+  width: 20dvw;
+  padding: 45px;
+  margin: auto;
+  margin-bottom: 80px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 0px;
+  border-style: solid;
+  font-size: 25px;
+  display: block;
+  background-color: #ffbd3a;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #d29929
+  background-color: #d29929;
 }
 
 button:active {
-    background-color: #f4c76d
+  background-color: #f4c76d;
 }
-
-
-
 
 .score {
-    text-align: center;
+  text-align: center;
 }
 
-/* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
-    .container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 60px 20px;
-        grid-template-areas:
-            "question question question question"
-            "reponse-1 reponse-1 reponse-2 reponse-2"
-            "reponse-3 reponse-3 reponse-4 reponse-4";
-            margin-top:120px;
-    }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10% 5%;
+    grid-template-areas:
+      "question question question question"
+      "reponse-1 reponse-1 reponse-2 reponse-2"
+      "reponse-3 reponse-3 reponse-4 reponse-4";
+    margin-top: 20dvh;
+  }
 
-    .bear {
-        width: 20%;
-    }
-/* .startQuiz{
-    margin-left: 46%;
-} */
-.buttonNext {
-        display: flex;
-        margin-left: 400px;
-        width: 400px;
-        height: 30px;
-        margin-bottom: 800px;
- }
-.next {
-        background-color: #FFBD3A;
-        border-radius: 14px;
-        font-size: large;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        width: 200px;
-        height: 50px;
-        margin-bottom: 800px;
-}
+  .bear {
+    width: 20%;
+  }
 
-    footer {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
+  .buttonNext {
+    display: flex;
+    margin-left: 400px;
+    width: 70dvw;
+    height: 20dvh;
+    margin-bottom: 30%;
+  }
+  .next {
+    background-color: #ffbd3a;
+    border-radius: 14px;
+    font-size: large;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    width: 40dvw;
+    height: 5dvh;
+  }
 
-    .logo {
-        max-width: 600px;
-    }
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+  }
 
-#rightAnswer{
-    margin-bottom:740px ;
-}
+  .logo {
+    max-width: 600px;
+  }
 
-#wrongAnswer{
-    margin-bottom: 540px;
-}
+  .reponse-1,
+  .reponse-2,
+  .reponse-3,
+  .reponse-4 {
+    display: flex;
+    max-width: 18dvw;
+    height: 12dvh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px rgb(101, 93, 93) solid;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: -2dvw;
+  }
+  .question {
+    width: 100%;
+    height: 12dvh;
+  }
+  #rightAnswer,
+  #wrongAnswer {
+    height: 0;
+    display: none;
+  }
+  #rightAnswer {
+    /* margin-bottom:740px ;  */
+    margin-bottom: 15dvh;
+  }
+  #wrongAnswer {
+    /* margin-bottom: 540px; */
+    margin-bottom: 20rem;
+  }
+  .beerCounter {
+    margin-top: -10dvh;
+    margin-left: 90dvw;
+  }
+  .endQuizz {
+    display: none;
+    height: 0;
+    margin-top: 49rem;
+  }
+  .endOfQuizz {
+    margin-top: 8rem;
+  }
+  .answerPageR,
+  .answerPageW {
+    width: 400px;
+  }
+  .bear {
+    margin-left: 5dvw;
+    margin-top: -20;
+  }
+  .blocScore {
+    margin-top: -15rem;
+  }
 
-.endQuizz{
-    margin-bottom:400px;
+  .buttonNextW,
+  .buttonNextR {
+    margin-top: 10dvh;
+    margin-right: -19dvw;
+  }
+  .basket {
+    margin-left: 40%;
+  }
 
-}
+  .finalScore {
+    margin-top: -800px;
+    margin-bottom: 200px;
+  }
+  .restart {
+    height: min-content;
+    margin: 0;
+    padding: 10px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
 
-
-
+  .startQuiz {
+    height: min-content;
+    margin: auto;
+    padding: 10px;
+  }
+  .blocScore {
+    margin-top: -50dvh;
+  }
 }
